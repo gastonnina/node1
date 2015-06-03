@@ -20,7 +20,8 @@ function agenda(titulo, inic) {
 
             for (i in _contenido) {
                 c++;
-                cad += c + '. ' + i + ', ' + _contenido[i] + '\n';
+                // tambien se puede recoger con contenido[i] pero es siempre mejor recogerlo con un getter por si se necesita procesar el contenido
+                cad += c + '. ' + i + ', ' + this.tf(i) + '\n';
             }
             return cad;
         },
